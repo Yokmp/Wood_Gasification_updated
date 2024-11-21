@@ -1,0 +1,11 @@
+{
+    "author": "cappie2000, plynkie_, yokmp",
+    "factorio_version": "2.0",
+	"dependencies": ["base >= 2.0", "? space-age"],
+    "description": "Turn wood into petroleum gas and diluted bitumen. Diluted bitumen can be turned into solid fuel. With some further research, you can turn diluted bitumen and water into crude oil. At a higher research level, you'll have advanced wood gasification processes that uses a refinery to turn wood and water into heavy oil, light oil and petroleum gas. This mod is meant to kickstart your chemical plants.",
+    "name": "Wood_Gasification_updated",
+    "homepage": "https://github.com/cappie/mods-factorio-Wood_Gasification",
+    "version": "4.1.3",
+    "contact": "cappie2000@gmail.com",
+    "title": "Wood Gasification updated"
+}

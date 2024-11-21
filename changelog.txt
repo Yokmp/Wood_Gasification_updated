@@ -1,0 +1,262 @@
+---------------------------------------------------------------------------------------------------
+Version: 4.1.3
+Date: 2024-11-20
+  Changes:
+    - respects non minable trees now
+    - uses the correct amount of wood per tree type
+---------------------------------------------------------------------------------------------------
+Version: 4.1.2
+Date: 2024-11-19
+  Changes:
+    - should work now even without space-age
+---------------------------------------------------------------------------------------------------
+Version: 4.1.1
+Date: 2024-11-16
+  Changes:
+    - added a setting so you can set the probability for a tree-seed to drop
+    - added some missing translations/text
+---------------------------------------------------------------------------------------------------
+Version: 4.1.0
+Date: 2024-11-16
+  Changes:
+    - the greenhouse working visuals should work now
+    - you can now plant seeds
+    - punching some poor trees will get you seeds, sometimmes
+    - if space-age is enabled, the setting to use Gleba is on by default
+    - Jelly and Yumako produktion/yield is less than half of what a planting tower would get you so you can use the greenhouse but its not as cheaty
+---------------------------------------------------------------------------------------------------
+Version: 4.0.1
+Date: 2024-11-13
+  Changes:
+    - the greenhouse can now be researched under agriculture if space-age is enabled
+    - added a setting to disable the gleba dependency
+    - changed the version number so that there aren't any conflicts (i want to keep the old changelog)
+---------------------------------------------------------------------------------------------------
+Version: 4.0.0
+Date: 2024-10-27
+  Changes:
+    - updated for 2.0 and added the greenhouse from K2
+---------------------------------------------------------------------------------------------------
+Version: 3.2.0
+Date: 2020-11-26
+  Changes:
+    - Excellent artwork updated by snouz submitted on 2021-03-08 (sorry, I changed my email):
+    - snouz: New tar, recipes and tech icons
+    - snouz: New mod icon
+    - snouz: Icon mipmaps
+---------------------------------------------------------------------------------------------------
+Version: 3.1.0
+Date: 2020-11-26
+  Changes:
+    - Updated for Faction 1.1
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2020-11-26
+  Changes:
+    - Updated for Faction 1.0
+    - Made the recipes easier since wood is early game and people install this mod on purpose
+  Rebalancing:
+    - Wood gasification costs 50 automation science (simple to research)
+    - Wood gasification of bitumen to oil costs 100 automation and logistic science (it's simple science, but hard to perfect)
+    - Advanced wood gasification costs 400 automation and logistic science (wood-to-oil easy-mode will take some effort)
+---------------------------------------------------------------------------------------------------
+Version: 2.5.0
+Date: 2020-03-18
+  Changes:
+    - Added Spanish, Italian and Portuguese translations using Deepl.com
+    - Changed some Dutch translations
+  Bugfixes:
+    - Fixed my broken changelog (I REALLY need automated tests and a changelog linter for these factorio mods)
+---------------------------------------------------------------------------------------------------
+Version: 2.4.0
+Date: 2020-03-14
+  Changes:
+    - Added Polish and French translations
+---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+Date: 2020-02-06
+  Rebalancing:
+    - Wood gasification costs 100 automation and logistic science (reasonably simple to research)
+    - Wood gasification of bitumen to oil costs 400 automation and logistic science (it's simple science, but hard to perfect)
+    - Advanced wood gasification costs 150 automation, logistic and chemical science (wood-to-oil easy-mode will take some effort)
+    - Wood gasification uses 10 wood to produce 20 petroleum gas and 8 bitumen (80% efficient)
+    - Wood gasification enables you to convert 32 bitumen into 1 solid fuel (75% efficient)
+    - Advanced bitumen processing uses 32 bitumen and 200 water to produce 40 crude oil (90% efficient (crude oil takes another efficiency hit during refining))
+    - Advanced wood gasification uses 20 wood and 200 water to produce 15 heavy oil, 15 light oil and 30 petroleum gas (90% efficient)
+  Changes:
+    - Changed the text string of Tar into Diluted Bitumen to be somewhat more scientifically correct, internally it's all still 'tar' for brevity.
+    - Added bitumen processing to crude oil using bitumen upgrading so you can turn wood into crude oil
+    - Added wood-gasification-to-oil as a new researchable technology after advanced wood gasification
+    - Updated the balancing.xls to show the calculations behind the wood-gasification-to-oil recipe
+    - Updated the source.psd after creating the graphics for the new wood-gasification-to-oil recipe and technology
+  Bugfixes:
+    - Fixed wood (and water) showing up as raw product for other oil-related products (this should be crude oil, not wood)
+    - Fixed the graphics by removing the coal that was still in there from older versions
+  Notes:
+    - Just FYI: this version of the mod still works with 0.17.x
+  Broke:
+    - The Russian and German translations probably need work since I used Google translate for the new tech.
+    - I tried not to break too much, but your wood processing setups probably need some love and attention.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 2020-02-06
+  Changes:
+    - Made the mod work with 0.18.x (sorry for being late to the party)
+---------------------------------------------------------------------------------------------------
+Version: 2.1.3
+Date: 2020-02-06
+  Rebalancing:
+    - Did the same rebalancing for 0.17.x as for 0.18.x in 2.3.0
+---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+Date: 2019-11-18
+  Changes:
+    - Added 'Holz' to the german translations
+    - Updated the GIT repository with the actual mod
+  Bugfixes:
+    - Fixed minor readme inconsistencies while updating the GIT repo
+---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+Date: 2019-09-10
+  Changes:
+    - Fixed the english language strings (petroleum was spelled wrong, thanks for noticing, tyrannus1)
+    - Added german translations (thank you for translating, tyrannus1)
+    - Added russian translations (thank you for translating, Va7ya)
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2019-07-19
+  Changes:
+    - Added advanced wood gasification using a refinery (28 wood & 50 water generates 35 heavy oil, 15 light and 20 petroleum gas
+    - Added some nicer images for the technologies
+    - Added calculations to the balancing.xls in the dev folder
+    - Removed the dev folder from the mod .zip archive (it's still available on GitHub, but the 250kb doesn't belong in the mod itself
+  Broke:
+    - Broke the german translations; feel free to retranslate them (Reysuke?)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2019-03-21
+  Changes:
+    - Added Dutch and German translations. (Thanks to Reysuke for the German translations)
+  Bugfixes:
+    - Fixed the English language strings to better facilitate translations.
+    - Fixed fluid tar properties to better reflect the actual properties of tar (not sure if this helps the game or not)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2019-03-10
+  Changes:
+    - Got in a fight with mods.factorio.com, but it should be ok now.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2019-03-10
+  Changes:
+    - Removed all the old 0.16 references; this mod is now 0.17+ only!
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2019-03-10
+  Bugfixes:
+    - Fixed technology description to reflect the new balancing.
+    - Fixed changelog.txt error which caused it not being able to parse (thank for catching the mistake, Pi-C!)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2019-03-09
+  Changes:
+    - Rebalanced all conversions to be 75% efficient. 10 wood gives 20 petroleum gas and 6 tar; Coal has been dropped entirely (sorry).
+    - Updated all texts
+    - Added excel sheet with conversions fully calculated.
+    - Moved excel sheet and photoshop files to dev folder in mod.
+    - Rewrote the changelog.txt to work with factorio's internal changelog parser.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2019-02-28
+  Bugfixes:
+    - Changed tar.png back to 32x32 pixels due to some placement problems for the barrels unloading and loading.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2019-02-28
+  Changes:
+    - Added a nice 144x144 mod thumbnail
+    - Replaced planks (entity:wood) with logs (entity:raw-wood) as entity 'wood', as only 'wood' exists as of version 0.17.0
+    - Replaced 'science-pack-1' to 'automation-science-pack' and 'science-pack-2' to 'logistic-science-pack'.
+  Bugfixes:
+    - Fixed some strings here and there to reflect the removal of planks.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2019-02-28
+  Changes:
+    - Updated mod to work with 0.17.x
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2018-11-12
+  Changes:
+    - After some hours of testing I declared this version v1.0.0; I'm quite happy with how it is now.
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 2018-11-12
+  Changes:
+    - Added raw-wood-gasification to use 'raw-wood' and changed wood-gasification to use actual 'wood'
+    - Added & changed graphics for both forms of gasifications
+    - Added crafting_machine_tint for gasification progress to resemble smoke (thank you, /r/factorio/comments/9ldsla/ )
+  Bugfixes:
+    - Fixed small typos and changed the mod description
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 2018-09-27
+  Changes:
+    - Upgraded the graphics to 64x64 tiles instead of the old 32x32
+  Bugfixes:
+    - Fixed the balancing (thanks to emilquast for the value rebalancing)
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 2018-09-17
+  Changes:
+    - Added the Github page as the homepage URL in the info.json
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 2018-09-16
+  Changes:
+    - Upgraded the mod to be compatible with 0.16.x
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2018-08-24
+  Changes:
+    - Put everything up on Github. I will be accepting pull requests, so go right ahead!
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2018-06-22
+  Changes:
+    - Tweaked some values to balance the module
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2018-06-22
+  Changes:
+    - Fluid and Item as output is probably not ok for Factorio; Changed recipe from "Tar to Heavy Oil & Coal" to "Tar to Heavy Oil"
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2018-05-12
+  Changes:
+    - Updated the description in the info.json to better reflect the changes of 0.2.x
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2018-05-12
+  Bugfixes:
+    - Fixed info.json and tabs-to-spaces in some other file because of problems with JSON parser.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2018-05-11
+  Changes:
+    - Added recipe to get Heavy oil and Coal from Tar in order to be able to bootstrap Coal liquefaction on oil-deprived maps.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2018-03-12
+  Bugfixes:
+    - Fixed some variables
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2018-03-12
+  Bugfixes:
+    - Fixed texture paths.. doh :)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2018-03-12
+  Changes:
+    - First version
