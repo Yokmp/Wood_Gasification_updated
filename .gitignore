@@ -1,4 +1,19 @@
 # custom
-_release_/
-*.py
 
+.vscode/
+test/
+.gitignore 
+.gitattributes
+desktop.ini
+.vscode/settings.json
+*.py
+*.7z
+*.xcf
+*.jpg
+Ingredient_Scrap.code-workspace
+*.zip
+_release_/
+__pycache__/
+_single/
+_multi/
+_lib/
