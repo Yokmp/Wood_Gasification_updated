@@ -9,8 +9,9 @@ Date: 2025-01-20
       higher than 1 by increasing upper bound of value range and then fine-adjusting probability.
     - Improved criteria for deciding which tree types should drop seeds (sugar canes and dead/dry
       trees will no longer drop them!). Reduced conflict with other mods.
-    - Tidied up criteria for greenhouse tech unlocks, according to presence of Space Age and
-      requirement of Gleba. Wood recipe using wood and seeds now exclude each other.
+    - Tidied up criteria for greenhouse tech unlocks. Tech can now always be researched after
+      discovery of Gleba, but Gleba setting disables earlier research.
+    - Wood recipe using wood now only available if Space Age is not installed.
     - Reordered greenhouse recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 4.1.3

@@ -8,7 +8,7 @@ data:extend({
   {
     type = "bool-setting",
     name = "require-gleba-for-greenhouse-tech",
-    --localised_name = {"", "[planet=gleba]", " ?"} or "",
+    localised_name = {"", "[planet=gleba]", " ?"} or "",
     setting_type = "startup",
     default_value = false,
     order = "a",
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "double-setting",
     name = "tree-seed-probability",
-    --localised_name = {"", "[img=sigma-symbol]", {"item-name.tree-seed"}, " ?"},
+    localised_name = {"", "[img=sigma-symbol]", {"item-name.tree-seed"}, " ?"},
     setting_type = "startup",
     default_value = 0.1,
     minimum_value = 0,
