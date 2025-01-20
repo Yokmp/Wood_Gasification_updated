@@ -6,6 +6,8 @@ if mods["space-age"] then
         type = "recipe",
         name = "yumako-seed-greenhouse",
         category = "R-greenhouse",
+        subgroup = "agriculture-processes",
+        order = "a[2-yumako]",
         localised_name = {"", {"entity-name.E-greenhouse"}, " ", {"item-name.yumako-seed"}},
         localised_description = {"", {"entity-description.E-greenhouse"}},
         icon = "__space-age__/graphics/icons/yumako-seed.png",
@@ -24,8 +26,10 @@ if mods["space-age"] then
     },
     {
         type = "recipe",
-        category = "R-greenhouse",
         name = "jellynut-seed-greenhouse",
+        category = "R-greenhouse",
+        subgroup = "agriculture-processes",
+        order = "a[3-jellynut]",
         localised_name = {"", {"entity-name.E-greenhouse"}, " ", {"item-name.jellynut-seed"}},
         localised_description = {"", {"entity-description.E-greenhouse"}},
         icon = "__space-age__/graphics/icons/jellynut-seed.png",
@@ -46,6 +50,8 @@ if mods["space-age"] then
         type = "recipe",
         name = "wood-seed-greenhouse",
         category = "R-greenhouse",
+        subgroup = "agriculture-processes",
+        order = "a[1-wood]",
         localised_name = {"", {"entity-name.E-greenhouse"}, " ", {"item-name.tree-seed"}},
         localised_description = {"", {"entity-description.E-greenhouse"}},
         icons = {
@@ -97,33 +103,49 @@ if mods["space-age"] then
 end
 
 --- TECHNOLOGY ---
-if mods["space-age"] and settings.startup["use-gleba"].value then
-  table.insert( data.raw.technology["agriculture"].effects, { type = "unlock-recipe", recipe = "greenhouse" })
-  table.insert(data.raw.technology["tree-seeding"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse" })
-  table.insert(data.raw.technology["yumako"].effects, { type = "unlock-recipe", recipe = "yumako-seed-greenhouse" })
-  table.insert(data.raw.technology["jellynut"].effects, { type = "unlock-recipe", recipe = "jellynut-seed-greenhouse" })
-else
-  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse" })
-  if mods["space-age"] then
-    table.insert(data.raw.technology["tree-seeding"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse" })
+if mods["space-age"] then
+  table.insert( data.raw.technology["agriculture" ].effects, { type = "unlock-recipe", recipe = "greenhouse"               })
+  table.insert( data.raw.technology["tree-seeding"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse"     })
+  table.insert( data.raw.technology["yumako"      ].effects, { type = "unlock-recipe", recipe = "yumako-seed-greenhouse"   })
+  table.insert( data.raw.technology["jellynut"    ].effects, { type = "unlock-recipe", recipe = "jellynut-seed-greenhouse" })
+  if not settings.startup["require-gleba-for-greenhouse-tech"].value then
+    table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse"           })
+    table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse" })
   end
+else
+  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse"      })    
+  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "wood-greenhouse" })    
 end
 
 --- TREE-SEEDS ---
 if mods["space-age"] then
-  local seed_probability = tonumber(settings.startup["seed-probability"].value)
-  if type(seed_probability) ~= "number" then seed_probability = 0.12 end
-  if seed_probability > 1 then seed_probability = seed_probability/100 end
-
-  local t = data.raw.tree
-  -- data.raw.tree["dead-tree-desert"].minable = nil
-  for _, value in pairs(t) do
-    if address_exists(value, "minable", "result") and value.minable.result == "wood" then
-      value.minable.results = {
-        {type = "item", name = "wood", amount = value.minable.count or 4},
-        {type = "item", name = "tree-seed", amount = 1, probability = seed_probability},
+    -- Calculates value range and probability for tree seed drops (average amount may go above 1):
+    local setting = settings.startup["tree-seed-probability"].value
+    local seed_min = 0
+    local seed_max = math.ceil(setting * 2) -- factor should not be lower than 2 in this setup!
+    local seed_prob = setting / (0.5 * (seed_min + seed_max))
+    
+    -- data.raw.tree["dead-tree-desert"].minable = nil
+    
+    -- Identifies trees and adds the tree seed as a potential drop:
+    for _, Tree in pairs(data.raw.tree) do
+      if not string.match(Tree.name, "^tree%-") then goto continue end -- *
+      if not Tree.minable then goto continue end
+      local result_wood = {
+        type = "item", name = "wood", amount = Tree.minable.count or 4
       }
-      -- log(serpent.block({value.name, value.minable.results[2].probability}))
+      local result_seed = {
+        type = "item", name = "tree-seed", amount_min  = seed_min, amount_max  = seed_max, probability = seed_prob
+      }
+      if Tree.minable.results then    -- loaded first, so checked first
+        table.insert(Tree.minable.results, result_seed)
+      elseif Tree.minable.result then -- loaded if "results" doesn't exist
+        Tree.minable.results = {result_wood, result_seed}
+      end
+      -- log(serpent.block({Tree.name, Tree.minable.results[2].probability}))
+      ::continue::
     end
   end
-end
+    
+    -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
+    --   ones. They will not drop from dry or dead trees, nor from sugar canes.
