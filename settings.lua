@@ -7,20 +7,48 @@ end
 data:extend({
   {
     type = "bool-setting",
-    name = "use-gleba",
+    name = "require-gleba-for-greenhouse-tech",
     localised_name = {"", "[planet=gleba]", " ?"} or "",
     setting_type = "startup",
-    default_value = default,
+    default_value = false,
     order = "a",
     hidden = hidden
   },
   {
-    type = "string-setting",
-    name = "seed-probability",
+    type = "double-setting",
+    name = "tree-seed-probability",
     localised_name = {"", "[img=sigma-symbol]", {"item-name.tree-seed"}, " ?"},
     setting_type = "startup",
-    default_value = "0.1",
-    order = "b",
+    default_value = 0.1,
+    minimum_value = 0,
+    maximum_value = 10,
+    order = "c",
     hidden = hidden
   },
+  {
+    type = "double-setting",
+    name = "greenhouse-output-pr-sec-wood",
+    setting_type = "startup",
+    default_value = 0.3333,
+    minimum_value = 0.001,
+    order = "d",
+  },
+  {
+    type = "double-setting",
+    name = "greenhouse-output-pr-sec-yumako",
+    setting_type = "startup",
+    default_value = 0.3333,
+    minimum_value = 0.001,
+    order = "e",
+    hidden = hidden
+  },
+  {
+    type = "double-setting",
+    name = "greenhouse-output-pr-sec-jellynut",
+    setting_type = "startup",
+    default_value = 0.3333,
+    minimum_value = 0.001,
+    order = "f",
+    hidden = hidden
+  }
 })

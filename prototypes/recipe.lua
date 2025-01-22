@@ -130,7 +130,7 @@ data:extend({
         type = "recipe",
         name = "wood-greenhouse",
         category = "R-greenhouse",
-        enabled = true,
+        enabled = false,
         show_amount_in_title = true,
         energy_required = 30,
         ingredients = {
