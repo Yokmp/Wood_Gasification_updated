@@ -119,6 +119,7 @@ end
 
 --- TREE-SEEDS ---
 if mods["space-age"] then
+  local function addSeedDrops(Table)
     -- Calculates value range and probability for tree seed drops (average amount may go above 1):
     local setting = settings.startup["tree-seed-probability"].value
     local seed_min = 0
@@ -147,6 +148,8 @@ if mods["space-age"] then
       ::continue::
     end
   end
+  addSeedDrops(data.raw.tree) addSeedDrops(data.raw.plant)
+end
     
     -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
     --   ones. They will not drop from dry or dead trees, nor from sugar canes.
