@@ -129,7 +129,7 @@ if mods["space-age"] then
     -- data.raw.tree["dead-tree-desert"].minable = nil
     
     -- Identifies trees and adds the tree seed as a potential drop:
-    for _, Tree in pairs(data.raw.tree) do
+    for _, Tree in pairs(Table) do
       if setting == 0 then goto continue end
       if not string.match(Tree.name, "^tree%-") then goto continue end -- *
       if not Tree.minable then goto continue end
