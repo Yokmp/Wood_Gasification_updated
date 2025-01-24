@@ -1,9 +1,4 @@
 ---------------------------------------------------------------------------------------------------
-Version: 4.2.1
-Date: 2025-01-24
-  Changes:
-    - Seeds now drop from planted trees as well.
----------------------------------------------------------------------------------------------------
 Version: 4.2.0
 Date: 2025-01-20
   Changes:
@@ -12,8 +7,8 @@ Date: 2025-01-20
     - Created startup settings for greenhouse output rate of wood, yumako fruits and jellynuts.
     - Changed seed drop probability setting to use floating numbers. Now also allows for values
       higher than 1 by increasing upper bound of value range and then fine-adjusting probability.
-    - Improved criteria for deciding which tree types should drop seeds (sugar canes and dead/dry
-      trees will no longer drop them!). Reduced conflict with other mods.
+    - Improved criteria for deciding which tree types should drop seeds (normal and planted trees;
+      not sugar canes and dead/dry trees!). Reduced conflict with other mods.
     - Tidied up criteria for greenhouse tech unlocks. Tech can now always be researched after
       discovery of Gleba, but Gleba setting disables unlocking it earlier.
     - Wood recipe using wood now only available if Space Age is not installed.
