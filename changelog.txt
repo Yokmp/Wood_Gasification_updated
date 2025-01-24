@@ -2,7 +2,7 @@
 Version: 4.2.1
 Date: 2025-01-24
   Changes:
-    - Seeds now drop from from planted trees as well.
+    - Seeds now drop from planted trees as well.
 ---------------------------------------------------------------------------------------------------
 Version: 4.2.0
 Date: 2025-01-20
