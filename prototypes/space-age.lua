@@ -147,8 +147,8 @@ if mods["space-age"] then
       -- log(serpent.block({Tree.name, Tree.minable.results[2].probability}))
       ::continue::
     end
-    -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
-    --   ones. They will not drop from dry or dead trees, nor from sugar canes.
   end
   addSeedDrops(data.raw.tree) addSeedDrops(data.raw.plant)
+  -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
+  --   ones. They will not drop from dry or dead trees, nor from sugar canes.
 end
