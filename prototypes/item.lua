@@ -22,7 +22,8 @@ data:extend({
     subgroup = "production-machine",
     order = "ca[assembling-machine-3]",
     stack_size = 10,
-    place_result = "E-greenhouse"
+    place_result = "E-greenhouse",
+    weight = 100*kg
   },
   {
     type = "sprite",

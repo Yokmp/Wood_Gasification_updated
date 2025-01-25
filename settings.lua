@@ -22,7 +22,7 @@ data:extend({
     default_value = 0.1,
     minimum_value = 0,
     maximum_value = 10,
-    order = "c",
+    order = "b",
     hidden = hidden
   },
   {
@@ -31,7 +31,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.3333,
     minimum_value = 0.001,
-    order = "d",
+    order = "c",
   },
   {
     type = "double-setting",
@@ -39,7 +39,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.3333,
     minimum_value = 0.001,
-    order = "e",
+    order = "d",
     hidden = hidden
   },
   {
@@ -48,7 +48,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.3333,
     minimum_value = 0.001,
-    order = "f",
+    order = "e",
     hidden = hidden
   }
 })

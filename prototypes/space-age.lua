@@ -13,7 +13,7 @@ if mods["space-age"] then
         icon = "__space-age__/graphics/icons/yumako-seed.png",
         enabled = false,
         show_amount_in_title = true,
-        energy_required = 60,
+        energy_required = 20 / settings.startup["greenhouse-output-pr-sec-yumako"].value,
         ingredients = {
             {type = "fluid", name = "water", amount = 120},
             {type = "item", name = "spoilage", amount = 4,},
@@ -35,7 +35,7 @@ if mods["space-age"] then
         icon = "__space-age__/graphics/icons/jellynut-seed.png",
         enabled = false,
         show_amount_in_title = true,
-        energy_required = 60,
+        energy_required = 20 / settings.startup["greenhouse-output-pr-sec-jellynut"].value,
         ingredients = {
             {type = "fluid", name = "water", amount = 120},
             {type = "item", name = "spoilage", amount = 4,},
@@ -66,7 +66,7 @@ if mods["space-age"] then
         },
         enabled = false,
         show_amount_in_title = true,
-        energy_required = 30,
+        energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
         surface_conditions =
         {
             {
@@ -119,16 +119,14 @@ end
 
 --- TREE-SEEDS ---
 if mods["space-age"] then
+  local function addSeedDrops(Table)
     -- Calculates value range and probability for tree seed drops (average amount may go above 1):
     local setting = settings.startup["tree-seed-probability"].value
     local seed_min = 0
     local seed_max = math.ceil(setting * 2) -- factor should not be lower than 2 in this setup!
-    local seed_prob = setting / (0.5 * (seed_min + seed_max))
-    
-    -- data.raw.tree["dead-tree-desert"].minable = nil
-    
+    local seed_prob = setting / (0.5 * (seed_min + seed_max))    
     -- Identifies trees and adds the tree seed as a potential drop:
-    for _, Tree in pairs(data.raw.tree) do
+    for _, Tree in pairs(Table) do
       if setting == 0 then goto continue end
       if not string.match(Tree.name, "^tree%-") then goto continue end -- *
       if not Tree.minable then goto continue end
@@ -147,6 +145,10 @@ if mods["space-age"] then
       ::continue::
     end
   end
+
+  for _, v in pairs({"tree", "plant"}) do addSeedDrops(data.raw[v]) end -- *
     
-    -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
-    --   ones. They will not drop from dry or dead trees, nor from sugar canes.
+  -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
+  --   ones. They will not drop from dry or dead trees, nor from sugar canes.
+
+end
