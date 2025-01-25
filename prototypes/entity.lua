@@ -14,8 +14,9 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = { pollution = -5 },
+      drain = "5kW"
     },
-    energy_usage = "144800W",
+    energy_usage = "145kW",
     ingredient_count = 4,
     crafting_speed = 1,
     crafting_categories = { "R-greenhouse" },

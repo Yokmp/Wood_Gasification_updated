@@ -132,7 +132,7 @@ data:extend({
         category = "R-greenhouse",
         enabled = false,
         show_amount_in_title = true,
-        energy_required = 30,
+        energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
         ingredients = {
             {type = "fluid", name = "water", amount = 200},
             {type = "item", name = "wood", amount = 20}
