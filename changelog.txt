@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.2.1
+Date: 2025-02-06
+  Changes:
+    - fixed max probability range setting
+    - changed order of the greenhouse to sit next to the agricultural tower
+---------------------------------------------------------------------------------------------------
 Version: 4.2.0
 Date: 2025-01-25
   Changes:

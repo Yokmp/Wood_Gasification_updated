@@ -21,7 +21,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.1,
     minimum_value = 0,
-    maximum_value = 10,
+    maximum_value = 1,
     order = "b",
     hidden = hidden
   },

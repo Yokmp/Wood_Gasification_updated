@@ -19,8 +19,8 @@ data:extend({
     name = "I-greenhouse",
     icon = "__Wood_Gasification_updated__/graphics/greenhouse/greenhouse_icon.png",
     icon_size = 64,
-    subgroup = "production-machine",
-    order = "ca[assembling-machine-3]",
+    subgroup = mods["space-age"] and "agriculture" or "production-machine",
+    order = "0",
     stack_size = 10,
     place_result = "E-greenhouse",
     weight = 100*kg
@@ -32,6 +32,6 @@ data:extend({
     priority = "extra-high",
     width = 64,
     height = 64,
-    shift = {0,02}
+    shift = {0,0.2}
   },
 })
