@@ -124,7 +124,7 @@ data:extend({
       {type = "item", name = "pipe", amount = 5},
       {type = "item", name = "iron-plate", amount = 10}
     },
-    results = {{type = "item", name = "I-greenhouse", amount = 1}}
+    results = {{type = "item", name = "greenhouse", amount = 1}}
   },
   {
     type = "recipe",

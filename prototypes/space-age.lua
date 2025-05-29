@@ -102,19 +102,21 @@ if mods["space-age"] then
   })
 end
 
---- TECHNOLOGY ---
+--- TECHNOLOGY --- --TODO resolve double unlocks
 if mods["space-age"] then
-  table.insert( data.raw.technology["agriculture" ].effects, { type = "unlock-recipe", recipe = "greenhouse"               })
-  table.insert( data.raw.technology["tree-seeding"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse"     })
-  table.insert( data.raw.technology["yumako"      ].effects, { type = "unlock-recipe", recipe = "yumako-seed-greenhouse"   })
-  table.insert( data.raw.technology["jellynut"    ].effects, { type = "unlock-recipe", recipe = "jellynut-seed-greenhouse" })
-  if not settings.startup["require-gleba-for-greenhouse-tech"].value then
+  if settings.startup["require-gleba-for-greenhouse-tech"].value then
+    table.insert( data.raw.technology["agriculture" ].effects, { type = "unlock-recipe", recipe = "greenhouse"               })
+    table.insert( data.raw.technology["tree-seeding"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse"     })
+  else
     table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse"           })
     table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "wood-seed-greenhouse" })
   end
+  table.insert( data.raw.technology["yumako"  ].effects, { type = "unlock-recipe", recipe = "yumako-seed-greenhouse"   })
+  table.insert( data.raw.technology["jellynut"].effects, { type = "unlock-recipe", recipe = "jellynut-seed-greenhouse" })
+
 else
-  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse"      })    
-  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "wood-greenhouse" })    
+  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "greenhouse"      })
+  table.insert( data.raw.technology["wood-gas-processing"].effects, { type = "unlock-recipe", recipe = "wood-greenhouse" })
 end
 
 --- TREE-SEEDS ---

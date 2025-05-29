@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "assembling-machine",
-    name = "E-greenhouse",
+    name = "greenhouse",
     max_health = 500,
     flags = {"placeable-neutral","player-creation"},
     dying_explosion = "big-explosion",
@@ -9,7 +9,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    minable = { mining_time = 0.3, result = "I-greenhouse" },
+    minable = { mining_time = 0.3, result = "greenhouse" },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

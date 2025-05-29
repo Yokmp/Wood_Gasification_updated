@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.2.2
+Date: 2025-02-21
+  Changes:
+    - factoriopedia now shows ony one greenhouse entry for item, entity and recipe
+    - fixed that greenhouse tech had multiple ways to unlock
+---------------------------------------------------------------------------------------------------
 Version: 4.2.1
 Date: 2025-02-06
   Changes:

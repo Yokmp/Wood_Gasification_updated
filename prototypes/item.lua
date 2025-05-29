@@ -16,13 +16,13 @@ data:extend({
   },
   {
     type = "item",
-    name = "I-greenhouse",
+    name = "greenhouse",
     icon = "__Wood_Gasification_updated__/graphics/greenhouse/greenhouse_icon.png",
     icon_size = 64,
     subgroup = mods["space-age"] and "agriculture" or "production-machine",
     order = "0",
     stack_size = 10,
-    place_result = "E-greenhouse",
+    place_result = "greenhouse",
     weight = 100*kg
   },
   {
