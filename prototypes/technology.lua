@@ -15,7 +15,7 @@ data:extend({
         type = "unlock-recipe",
         recipe = "solid-fuel-from-tar"
       },
-      -- {
+      -- { --tech unlocks in space-age.lua
       --   type = "unlock-recipe",
       --   recipe = "greenhouse"
       -- },

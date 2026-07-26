@@ -15,17 +15,6 @@ data:extend({
     -- flow_to_energy_ratio = 0.80,
   },
   {
-    type = "item",
-    name = "greenhouse",
-    icon = "__Wood_Gasification_updated__/graphics/greenhouse/greenhouse_icon.png",
-    icon_size = 64,
-    subgroup = mods["space-age"] and "agriculture" or "production-machine",
-    order = "0",
-    stack_size = 10,
-    place_result = "greenhouse",
-    weight = 100*kg
-  },
-  {
     type = "sprite",
     name = "sigma-symbol",
     filename = "__Wood_Gasification_updated__/graphics/icon/sigma_symbol.png",
@@ -35,3 +24,18 @@ data:extend({
     shift = {0,0.2}
   },
 })
+if settings.startup["enable-greenhouse"].value then
+  data:extend({
+    {
+      type = "item",
+      name = "greenhouse",
+      icon = "__Wood_Gasification_updated__/graphics/greenhouse/greenhouse_icon.png",
+      icon_size = 64,
+      subgroup = mods["space-age"] and "agriculture" or "production-machine",
+      order = "0",
+      stack_size = 10,
+      place_result = "greenhouse",
+      weight = 100*kg
+    },
+  })
+end

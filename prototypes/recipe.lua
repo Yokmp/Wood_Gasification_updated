@@ -1,4 +1,6 @@
-
+-------------------------
+--- WOOD GASIFICATION ---
+-------------------------
 data:extend({
   {
     type = "recipe",
@@ -109,38 +111,41 @@ data:extend({
     always_show_made_in = true,
     allow_decomposition = false,
   },
+})
 
 ------------------
 --- GREENHOUSE ---
 ------------------
-
-  {
-    type = "recipe",
-    name = "greenhouse",
-    enabled = false,
-    energy_required = 2,
-    ingredients = {
-      {type = "item", name = "stone-brick", amount = 8},
-      {type = "item", name = "pipe", amount = 5},
-      {type = "item", name = "iron-plate", amount = 10}
+if settings.startup["enable-greenhouse"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "greenhouse",
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "stone-brick", amount = 8},
+        {type = "item", name = "pipe", amount = 5},
+        {type = "item", name = "iron-plate", amount = 10}
+      },
+      results = {{type = "item", name = "greenhouse", amount = 1}}
     },
-    results = {{type = "item", name = "greenhouse", amount = 1}}
-  },
-  {
-    type = "recipe",
-    name = "wood-greenhouse",
-    category = "R-greenhouse",
-    enabled = false,
-    show_amount_in_title = true,
-    energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
-    ingredients = {
-      {type = "fluid", name = "water", amount = 200},
-      {type = "item", name = "wood", amount = 20}
+    {
+      type = "recipe",
+      name = "wood-greenhouse",
+      category = "R-greenhouse",
+      enabled = false,
+      show_amount_in_title = true,
+      energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
+      ingredients = {
+        {type = "fluid", name = "water", amount = 200},
+        {type = "item", name = "wood", amount = 20}
+      },
+      results = {{type = "item", name = "wood", amount = 40}}
     },
-    results = {{type = "item", name = "wood", amount = 40}}
-  },
-  {
-    type = "recipe-category",
-    name = "R-greenhouse"
-  }
-})
+    {
+      type = "recipe-category",
+      name = "R-greenhouse"
+    }
+  })
+end

@@ -151,6 +151,8 @@ if mods["space-age"] then
   for _, v in pairs({"tree", "plant"}) do addSeedDrops(data.raw[v]) end -- *
 
   -- * Best criterium I could find. Seeds will drop from all normal tree variants, including planted
-  --   ones. They will not drop from dry or dead trees, nor from sugar canes.
+  -- * ones. They will not drop from dry or dead trees, nor from sugar canes.
 
 end
+
+-- error("Greenhouse loaded")

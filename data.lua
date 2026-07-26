@@ -17,4 +17,6 @@ require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.item")
 
-require("prototypes.space-age")
+if settings.startup["enable-greenhouse"].value then
+  require("prototypes.space-age")
+end

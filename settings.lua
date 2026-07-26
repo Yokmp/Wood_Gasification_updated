@@ -7,11 +7,20 @@ end
 data:extend({
   {
     type = "bool-setting",
+    name = "enable-greenhouse",
+    localised_name = {"", "[item=greenhouse]", " ?"} or "",
+    setting_type = "startup",
+    default_value = true,
+    order = "aa",
+    hidden = false
+  },
+  {
+    type = "bool-setting",
     name = "require-gleba-for-greenhouse-tech",
     localised_name = {"", "[planet=gleba]", " ?"} or "",
     setting_type = "startup",
     default_value = false,
-    order = "a",
+    order = "ab",
     hidden = hidden
   },
   {

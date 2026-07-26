@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.2.3
+Date: 2026-07-25
+  Changes:
+    - greenhouse can now be deactivated if your mod already has ways to produce wood
+---------------------------------------------------------------------------------------------------
 Version: 4.2.2
 Date: 2025-02-21
   Changes:
-    - factoriopedia now shows ony one greenhouse entry for item, entity and recipe
+    - factoriopedia now shows only one greenhouse entry for item, entity and recipe
     - fixed that greenhouse tech had multiple ways to unlock
 ---------------------------------------------------------------------------------------------------
 Version: 4.2.1
