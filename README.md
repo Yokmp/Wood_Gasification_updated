@@ -1,40 +1,68 @@
-# Mods: Factorio: Wood Gasification
+# Factorio: Wood Gasification
 
 <img align="right" width="100" height="100" src="thumbnail.png">
-This is the repository for the Wood Gasification mod for Factorio.
 
-Too much wood? No oil on your map? Want petroleum gas, solid fuel or crude oil? Then this mod's for you!
+**Too much wood? Not enough oil? Turn surplus timber into petroleum gas,
+solid fuel and crude oil instead of letting it pile up.**
 
-Wood gasification is the process of turning wood into it's carbohydrate constituents and releasing its chemical potential in the form of several oil products: petroleum gas, diluted bitumen, which can be converted to crude oil.
+Wood Gasification gives excess wood a useful place in your factory. What starts
+as a simple way to dispose of unwanted logs grows into a complete alternative
+petrochemical production chain.
 
-Wood gasification comes in two flavors: Wood gas processing uses a chemical lab to turn 10 units of wood into 20 units of petroleum gas and 8 units of diluted bitumen. 32 units of diluted bitumen can be turned into 1 unit of solid fuel. With some further research, you can turn 32 diluted bitumen and 200 water into 40 crude oil. At a higher research level, you'll have advanced wood gasification processes that uses a refinery to turn 20 wood and 200 water into 15 units of heavy oil, 15 units of light oil and 30 petroleum gas. This mod is meant to kick-start your chemical plants (or when you have a shortage of crude oil OR a surplus of wood on your map)
+## From wood to oil
 
-This mod has been translated to these languages:
+The first processing stage uses pyrolysis to turn wood into petroleum gas, wood
+tar and charcoal. The gas is ready to use, the tar can be converted into solid
+fuel or cracked into oil products, and the charcoal serves as both a better fuel
+and a useful feedstock for later processing.
 
-- English (cappie)
-- Dutch (cappie)
-- German (Reysuke)
-- Russian (Va7ya)
-- French (kryshnar & meah41)
-- Polish (Mgis)
-- Spanish (Deepl.com)
-- Italian (Deepl.com)
-- Portuguese (Deepl.com)
+Further research unlocks more efficient ways to process wood and wood tar.
+Finally, synthesis gas can be produced from tar, charcoal or solid fuel and used
+to turn wood tar into crude oil. This makes wood a useful supplement to an oil
+industry—or an alternative starting point when convenient oil fields are hard
+to find.
 
-## Excellent artwork was created by snouz
-A pull request was submitted on github which I managed to miss for a year and a half. It has been finally included. My apologies for this oversight! The addition of the new artwork was released as version 3.2.0
+## Modern or classic processing
 
-## Continuation of unmaintained mod
+The modern production chain is enabled by default and gradually expands from
+basic pyrolysis to advanced synthesis-gas processing.
 
-This mod is an update for the 0.14 mod 'Wood Gas' which was discontinued; It's my attempt to upgrade 'Wood Gas' (0.14 only) to 0.15+ and continue the development of the mod. The original author ('mooklepticon') of 'Wood Gas' has given me his blessing to continue this mod.
+Players who prefer the original Wood Gasification recipes can enable **Use
+legacy wood processing** in the startup settings. Legacy mode restores the old
+recipes and research progression while hiding the modern chain. Both recipe
+sets remain in the mod so existing machines and save games keep working when
+the setting is changed.
 
-## Translators wanted
+## Greenhouse
 
-I would love to be able to support even more languages like Spanish, Portugese, Italian, Japanese and maybe some slavic languages and perhaps even Hungarian or Finnish?. If you would like to help, please take a look at the repository, or if you don't know how to do that Github thing, just contact me via <https://mods.factorio.com/> and I'll add your translated strings from the locale-file to the mods' repository.
+The optional greenhouse provides a renewable source of wood and can be disabled
+when another mod already fills that role. Its production speed can be adjusted
+in the startup settings, and it can be connected to the circuit network for
+automatic control.
 
-## TLDR
+With Space Age, the greenhouse uses tree seeds for wood production and can also
+grow Yumako and Jellynut. Seed drops and whether the greenhouse should require
+Gleba can be configured separately.
 
-This mod processes wood into oil products.
+## Mod compatibility
 
-- Early game: Wood in Chemical plant creates Petroleum Gas & Diluted Bitumen. Diluted Bitumen & Water in Chemical plant produces either Crude Oil or Solid Fuel
-- Later game: Wood in Refinery creates Heavy Oil, Light Oil & Petroleum Gas directly.
+Wood Gasification can reuse synthesis gas and carbon supplied by other mods
+instead of creating isolated duplicates. When compatible carbon monoxide or
+carbon dioxide fluids exist, they become useful byproducts of the corresponding
+processes.
+
+Angel's Petrochemical Processing receives dedicated integration: synthesis-gas
+recipes use suitable steam crackers, gas refineries and separators, with normal
+chemical plants remaining available as a fallback when those machines do not
+exist.
+
+## Languages
+
+English, Dutch, German, Russian, French, Polish, Spanish, Italian and Portuguese
+locale files are included.
+
+## Credits
+
+This mod continues the discontinued Wood Gas mod with the original author's
+permission. Artwork contributed by snouz remains included alongside newer
+wood-processing artwork.

@@ -24,6 +24,8 @@ if settings.startup["enable-greenhouse"].value then
       ingredient_count = 4,
       crafting_speed = 1,
       crafting_categories = { "R-greenhouse" },
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["assembling-machine"],
       icon = "__Wood_Gasification_updated__/graphics/greenhouse/greenhouse_icon.png",
       icon_size = 64,
       fluid_boxes_off_when_no_fluid_recipe = false,

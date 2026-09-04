@@ -1,29 +1,17 @@
 data:extend({
   {
-    type = "fluid",
-    name = "tar",
-    subgroup = "fluid",
-    default_temperature = 180,
-    max_temperature = 250,
-    heat_capacity = "1470000J",
-    base_color = {r=0.05, g=0.05, b=0.05},
-    flow_color = {r=0.1, g=0.1, b=0.1},
-    icon = "__Wood_Gasification_updated__/graphics/icon/tar.png",
+    type = "item",
+    name = "wood-charcoal",
+    icon = "__Wood_Gasification_updated__/graphics/icon/wood-charcoal.png",
     icon_size = 64,
-    order = "a[fluid]-t[tar]",
-    -- pressure_to_speed_ratio = 0.2,
-    -- flow_to_energy_ratio = 0.80,
-  },
-  {
-    type = "sprite",
-    name = "sigma-symbol",
-    filename = "__Wood_Gasification_updated__/graphics/icon/sigma_symbol.png",
-    priority = "extra-high",
-    width = 64,
-    height = 64,
-    shift = {0,0.2}
-  },
+    subgroup = "raw-material",
+    order = "a[wood-products]-a[wood-charcoal]",
+    stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "4MJ"
+  }
 })
+
 if settings.startup["enable-greenhouse"].value then
   data:extend({
     {
@@ -35,7 +23,7 @@ if settings.startup["enable-greenhouse"].value then
       order = "0",
       stack_size = 10,
       place_result = "greenhouse",
-      weight = 100*kg
-    },
+      weight = 100 * kg
+    }
   })
 end

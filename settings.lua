@@ -1,10 +1,15 @@
-local hidden, default = true, false
+local hidden = true
 if mods["space-age"] then
-  default = true
   hidden = false
-  l_name = "__base__/graphics/empty.png"
 end
 data:extend({
+  {
+    type = "bool-setting",
+    name = "wood-gasification-legacy-mode",
+    setting_type = "startup",
+    default_value = false,
+    order = "a"
+  },
   {
     type = "bool-setting",
     name = "enable-greenhouse",
@@ -59,5 +64,21 @@ data:extend({
     minimum_value = 0.001,
     order = "e",
     hidden = hidden
+  },
+  {
+    type = "bool-setting",
+    name = "wood-gasification-auto-unlock-byproduct-handling",
+    setting_type = "startup",
+    default_value = true,
+    hidden = true,
+    order = "zy"
+  },
+  {
+    type = "bool-setting",
+    name = "wood-gasification-test-mode",
+    setting_type = "startup",
+    default_value = false,
+    hidden = true,
+    order = "zz"
   }
 })

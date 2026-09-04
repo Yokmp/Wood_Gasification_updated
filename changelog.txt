@@ -1,4 +1,43 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.3.1
+Date: 2026-09-03
+  Features:
+    - New setting to let you switch between modern and legacy mode
+    - The greenhouse now has wire connections
+---------------------------------------------------------------------------------------------------
+Version: 4.3.0
+Date: 2026-09-03
+  Features:
+    - Rebuilt wood processing as a three-stage pyrolysis, advanced processing and synthesis-gas chain
+    - Added wood charcoal, targeted wood carbonization and an optional charcoal-to-carbon conversion
+    - Added a local synthesis gas fallback and automatic carbon-monoxide and carbon-dioxide byproducts
+    - Added Angel Petrochem machine integration for steam crackers, gas refineries and separators
+    - Added automatic Angel flare-stack unlocking alongside recipes that produce gaseous byproducts
+    - Added charcoal gasification and solid-fuel reforming as independent synthesis-gas sources
+    - Added synthesis-gas-assisted liquefaction of wood tar into crude oil
+    - Added an optional legacy processing mode that restores the original recipes and research costs
+    - Added circuit-network connectivity to the greenhouse
+    - Assigned Angel-specific synthesis recipes exclusively to suitable visible Angel machines, with chemical-plant fallback
+    - Normalized Angel recipe times to five effective seconds in each assigned machine family's highest visible tier
+    - Moved mod-specific Angel and Space Age adapters into a dedicated compatibility/mods directory
+
+    - Added a parallel wood pyrolysis chain producing more valuable wood charcoal and wood tar
+    - Added direct steam cracking of wood tar into oil products
+    - Optional gas-processing recipe icons now compose the detected prototype icons dynamically
+  Changes:
+    - Split fluids, items, entities, recipes, technologies, helpers and compatibility adapters into dedicated files
+    - Renamed the visible production processes consistently around wood pyrolysis
+    - Rebalanced technology costs to 50, 100 and 150 science packs
+    - Removed the obsolete recipe-mode setting and the experimental hydrogenation recipes
+    - Replaced the byproduct toggle with a hidden compatibility switch for automatic disposal unlocks
+    - Inactive modern or legacy recipes are now hidden instead of removed to preserve configured machines
+  Compatibility:
+    - Kept the existing recipe and wood-tar fluid prototype IDs
+    - Preserved the original ingredients, products and crafting times of legacy recipes
+    - Legacy recipes remain unlocked but are hidden from new recipe selection
+    - Preserved the greenhouse startup switch and Space Age greenhouse behavior
+    - Renamed the displayed diluted bitumen to the more accurate wood tar
+---------------------------------------------------------------------------------------------------
 Version: 4.2.4
 Date: 2026-07-26
   Changes:
