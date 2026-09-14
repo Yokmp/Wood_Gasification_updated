@@ -56,6 +56,9 @@ recipes use suitable steam crackers, gas refineries and separators, with normal
 chemical plants remaining available as a fallback when those machines do not
 exist.
 
+Quality and Standalone Space Age Library are supported without requiring the
+full Space Age expansion.
+
 ## Languages
 
 English, Dutch, German, Russian, French, Polish, Spanish, Italian and Portuguese

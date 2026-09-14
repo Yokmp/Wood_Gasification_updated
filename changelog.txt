@@ -32,6 +32,7 @@ Date: 2026-09-03
     - Replaced the byproduct toggle with a hidden compatibility switch for automatic disposal unlocks
     - Inactive modern or legacy recipes are now hidden instead of removed to preserve configured machines
   Compatibility:
+    - Restored chemical-plant access to synthesis-gas recipes when Standalone Space Age Library is active
     - Kept the existing recipe and wood-tar fluid prototype IDs
     - Preserved the original ingredients, products and crafting times of legacy recipes
     - Legacy recipes remain unlocked but are hidden from new recipe selection
