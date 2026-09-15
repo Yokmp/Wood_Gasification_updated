@@ -56,8 +56,8 @@ recipes use suitable steam crackers, gas refineries and separators, with normal
 chemical plants remaining available as a fallback when those machines do not
 exist.
 
-Quality and Standalone Space Age Library are supported without requiring the
-full Space Age expansion.
+Quality is supported without requiring the full Space Age expansion. Integration
+for Factorio 2.1-compatible releases of Standalone Space Age Library is included.
 
 ## Languages
 

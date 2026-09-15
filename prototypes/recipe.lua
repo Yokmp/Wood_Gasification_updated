@@ -4,7 +4,6 @@ local legacy_mode = require("lib.config").legacy_mode()
 local common = {
   enabled = false,
   energy_required = 5,
-  always_show_products = true,
   always_show_made_in = true,
   allow_decomposition = false
 }
@@ -21,7 +20,7 @@ data:extend({
   -- Kept unchanged for existing saves and exposed again when legacy mode is enabled.
   recipe({
     name = "wood-gasification",
-    category = "chemistry",
+    categories = {"chemistry"},
     hidden = not legacy_mode,
     ingredients = {{type = "item", name = "wood", amount = 10}},
     results = {
@@ -40,7 +39,7 @@ data:extend({
   }),
   recipe({
     name = "crude-oil-from-tar",
-    category = "chemistry",
+    categories = {"chemistry"},
     hidden = not legacy_mode,
     ingredients = {
       {type = "fluid", name = "tar", amount = 32},
@@ -59,7 +58,7 @@ data:extend({
   }),
   recipe({
     name = "advanced-wood-gasification",
-    category = "oil-processing",
+    categories = {"oil-processing"},
     hidden = not legacy_mode,
     energy_required = 10,
     ingredients = {
@@ -79,7 +78,7 @@ data:extend({
 
   recipe({
     name = "wood-pyrolysis",
-    category = "chemistry",
+    categories = {"chemistry"},
     hidden = legacy_mode,
     ingredients = {{type = "item", name = "wood", amount = 10}},
     results = {
@@ -95,7 +94,7 @@ data:extend({
   }),
   recipe({
     name = "solid-fuel-from-tar",
-    category = "chemistry",
+    categories = {"chemistry"},
     ingredients = {{type = "fluid", name = "tar", amount = 32}},
     results = {{type = "item", name = "solid-fuel", amount = 1}},
     icon = "__Wood_Gasification_updated__/graphics/icon/solid-fuel-from-tar.png",
@@ -110,7 +109,7 @@ data:extend({
   }),
   recipe({
     name = "wood-tar-steam-cracking",
-    category = "chemistry",
+    categories = {"chemistry"},
     hidden = legacy_mode,
     ingredients = {
       {type = "fluid", name = "tar", amount = 24},
@@ -130,7 +129,7 @@ data:extend({
   }),
   recipe({
     name = "hydrothermal-wood-pyrolysis",
-    category = "chemistry",
+    categories = {"chemistry"},
     hidden = legacy_mode,
     ingredients = {
       {type = "item", name = "wood", amount = 20},
@@ -150,7 +149,7 @@ data:extend({
   }),
   recipe({
     name = "wood-tar-steam-gasification",
-    category = "oil-processing",
+    categories = {"oil-processing"},
     hidden = legacy_mode,
     ingredients = {
       {type = "fluid", name = "tar", amount = 24},
@@ -166,7 +165,7 @@ data:extend({
   }),
   recipe({
     name = "wood-carbonization",
-    category = "smelting",
+    categories = {"smelting"},
     hidden = legacy_mode,
     ingredients = {{type = "item", name = "wood", amount = 10}},
     results = {{type = "item", name = "wood-charcoal", amount = 6}},
@@ -193,8 +192,7 @@ if settings.startup["enable-greenhouse"].value then
     }),
     recipe({
       name = "wood-greenhouse",
-      category = "R-greenhouse",
-      show_amount_in_title = true,
+      categories = {"R-greenhouse"},
       energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
       ingredients = {
         {type = "fluid", name = "water", amount = 200},

@@ -1,17 +1,17 @@
 {
     "author": "cappie2000, plynkie_, yokmp, ZarSasha",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
 	"dependencies": [
-        "base >= 2.0",
+        "base >= 2.1",
         "? space-age",
         "? um-standalone-space-age-lib",
-        "? angelsrefining >= 2.0.4",
-        "? angelspetrochem >= 2.0.3"
+        "? angelsrefining >= 2.1.2",
+        "? angelspetrochem >= 2.1.2"
     ],
     "description": "Process wood through pyrolysis into petroleum gas, wood tar and charcoal, then refine it into fuels, oil products and synthesis gas. Compatible synthesis gas and carbon from other mods are integrated automatically, with an optional legacy recipe mode.",
     "name": "Wood_Gasification_updated",
     "homepage": "https://github.com/cappie/mods-factorio-Wood_Gasification",
-    "version": "4.3.2",
+    "version": "4.4.0",
     "contact": "cappie2000@gmail.com",
     "title": "Wood Gasification updated"
 }

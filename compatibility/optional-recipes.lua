@@ -81,7 +81,7 @@ data:extend({
   {
     type = "recipe",
     name = "wood-tar-steam-reforming",
-    category = "wood-syngas-reforming",
+    categories = {"wood-syngas-reforming"},
     enabled = false,
     hidden = legacy_mode,
     energy_required = 5,
@@ -96,7 +96,6 @@ data:extend({
     main_product = syngas,
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-y[wood-tar-steam-reforming]",
-    always_show_products = true,
     always_show_made_in = true,
     allow_decomposition = false
   },
@@ -104,7 +103,7 @@ data:extend({
     type = "recipe",
     -- Kept for compatibility; the prototype now performs charcoal steam gasification.
     name = "wood-tar-synthesis-from-charcoal",
-    category = "wood-syngas-charcoal-synthesis",
+    categories = {"wood-syngas-charcoal-synthesis"},
     enabled = false,
     hidden = legacy_mode,
     energy_required = 5,
@@ -119,7 +118,6 @@ data:extend({
     main_product = syngas,
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-y[wood-tar-synthesis-from-charcoal]",
-    always_show_products = true,
     always_show_made_in = true,
     allow_decomposition = false
   },
@@ -127,7 +125,7 @@ data:extend({
     type = "recipe",
     -- Kept for compatibility; the prototype now performs solid-fuel steam reforming.
     name = "wood-tar-synthesis-from-solid-fuel",
-    category = "wood-syngas-solid-fuel-synthesis",
+    categories = {"wood-syngas-solid-fuel-synthesis"},
     enabled = false,
     hidden = legacy_mode,
     energy_required = 5,
@@ -143,14 +141,13 @@ data:extend({
     main_product = "tar",
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-y[wood-tar-synthesis-from-solid-fuel]",
-    always_show_products = true,
     always_show_made_in = true,
     allow_decomposition = false
   },
   {
     type = "recipe",
     name = "wood-tar-syngas-liquefaction",
-    category = "wood-syngas-liquefaction",
+    categories = {"wood-syngas-liquefaction"},
     enabled = false,
     hidden = legacy_mode,
     energy_required = 5,
@@ -166,7 +163,6 @@ data:extend({
     main_product = "crude-oil",
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-y[wood-tar-syngas-liquefaction]",
-    always_show_products = true,
     always_show_made_in = true,
     allow_decomposition = false
   }
@@ -188,7 +184,7 @@ if carbon then
     {
       type = "recipe",
       name = "wood-charcoal-purification",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       enabled = false,
       hidden = legacy_mode,
       energy_required = 5,
@@ -200,7 +196,6 @@ if carbon then
       main_product = carbon,
       subgroup = "raw-material",
       order = "a[wood-products]-c[carbon]",
-      always_show_products = true,
       always_show_made_in = true,
       allow_decomposition = false
     }

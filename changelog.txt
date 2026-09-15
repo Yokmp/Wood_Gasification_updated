@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.4.0
+Date: 2026-09-15
+  Changes:
+    - Updated the mod and dependencies for Factorio 2.1
+  Compatibility:
+    - Migrated recipe category definitions to the Factorio 2.1 categories table
+    - Migrated probabilistic products to independent_probability
+    - Removed obsolete recipe display fields and updated the greenhouse light definition
+---------------------------------------------------------------------------------------------------
 Version: 4.3.2
 Date: 2026-09-14
   Compatibility:

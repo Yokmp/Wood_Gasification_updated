@@ -81,7 +81,6 @@ if settings.startup["enable-greenhouse"].value then
         },
         working_visualisations = {
           {
-            draw_as_light = true,
             animation = {
 
                 filename = "__Wood_Gasification_updated__/graphics/greenhouse/hr-greenhouse-light.png",
@@ -91,6 +90,7 @@ if settings.startup["enable-greenhouse"].value then
                 repeat_count = 10,
                 scale = 0.5,
                 animation_speed = 0.35,
+                draw_as_light = true,
             },
           },
           {

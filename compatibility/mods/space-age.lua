@@ -6,7 +6,7 @@ data:extend({
   {
     type = "recipe",
     name = "yumako-seed-greenhouse",
-    category = "R-greenhouse",
+    categories = {"R-greenhouse"},
     subgroup = "agriculture-processes",
     order = "a[2-yumako]",
     localised_name = {"", {"entity-name.greenhouse"}, " ", {"item-name.yumako-seed"}},
@@ -14,7 +14,6 @@ data:extend({
     icon = "__space-age__/graphics/icons/yumako-seed.png",
     icon_size = 64,
     enabled = false,
-    show_amount_in_title = true,
     energy_required = 20 / settings.startup["greenhouse-output-pr-sec-yumako"].value,
     ingredients = {
       {type = "fluid", name = "water", amount = 120},
@@ -23,13 +22,13 @@ data:extend({
     },
     results = {
       {type = "item", name = "yumako", amount = 20},
-      {type = "item", name = "spoilage", amount = 4, probability = 0.25}
+      {type = "item", name = "spoilage", amount = 4, independent_probability = 0.25}
     }
   },
   {
     type = "recipe",
     name = "jellynut-seed-greenhouse",
-    category = "R-greenhouse",
+    categories = {"R-greenhouse"},
     subgroup = "agriculture-processes",
     order = "a[3-jellynut]",
     localised_name = {"", {"entity-name.greenhouse"}, " ", {"item-name.jellynut-seed"}},
@@ -37,7 +36,6 @@ data:extend({
     icon = "__space-age__/graphics/icons/jellynut-seed.png",
     icon_size = 64,
     enabled = false,
-    show_amount_in_title = true,
     energy_required = 20 / settings.startup["greenhouse-output-pr-sec-jellynut"].value,
     ingredients = {
       {type = "fluid", name = "water", amount = 120},
@@ -46,13 +44,13 @@ data:extend({
     },
     results = {
       {type = "item", name = "jellynut", amount = 20},
-      {type = "item", name = "spoilage", amount = 4, probability = 0.25}
+      {type = "item", name = "spoilage", amount = 4, independent_probability = 0.25}
     }
   },
   {
     type = "recipe",
     name = "wood-seed-greenhouse",
-    category = "R-greenhouse",
+    categories = {"R-greenhouse"},
     subgroup = "agriculture-processes",
     order = "a[1-wood]",
     localised_name = {"", {"entity-name.greenhouse"}, " ", {"item-name.tree-seed"}},
@@ -60,7 +58,6 @@ data:extend({
     icon = "__space-age__/graphics/icons/tree-seed.png",
     icon_size = 64,
     enabled = false,
-    show_amount_in_title = true,
     energy_required = 20 / settings.startup["greenhouse-output-pr-sec-wood"].value,
     surface_conditions = {
       {property = "pressure", min = 0, max = 2000},
@@ -109,7 +106,7 @@ if probability > 0 then
           name = "tree-seed",
           amount_min = seed_min,
           amount_max = seed_max,
-          probability = seed_probability
+          independent_probability = seed_probability
         }
         if tree.minable.results then
           table.insert(tree.minable.results, seed_result)

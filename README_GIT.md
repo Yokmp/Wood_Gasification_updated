@@ -1,8 +1,8 @@
 # Factorio: Wood Gasification
 <img align="right" width="100" height="100" src="thumbnail.png">
 
-Wood Gasification 4.3 turns excess wood into useful petrochemical products
-through a dedicated three-stage research branch. It supports Factorio 2.0,
+Wood Gasification 4.4 turns excess wood into useful petrochemical products
+through a dedicated three-stage research branch. It supports Factorio 2.1,
 Space Age and optional Angel's Refining/Petrochemical Processing integration.
 
 ## Research tree
